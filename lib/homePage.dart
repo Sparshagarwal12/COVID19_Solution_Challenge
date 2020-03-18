@@ -4,13 +4,14 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(" "),
-        backgroundColor: Colors.white,
-        elevation: 0.0,
-      ),
+      // appBar: AppBar(
+      //   title: Text(" "),
+      //   backgroundColor: Color(0xFFd2edfd),
+      //   elevation: 0.0,
+      // ),
       body: Container(
-        color: Colors.white,
+        padding: EdgeInsets.only(top: 60),
+        color: Color(0xFFd2edfd),
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
         child: Stack(
@@ -21,7 +22,7 @@ class HomePage extends StatelessWidget {
                 padding: const EdgeInsets.only(bottom: 20.0),
                 child: Container(
                   child:
-                      Image(image: AssetImage("assets/images/abstractw.png")),
+                      Image(image: AssetImage("assets/images/abstractb.png")),
                 ),
               ),
             ),
@@ -29,46 +30,100 @@ class HomePage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
                 Container(
-                  width: 160,
+                  width: 190,
                   child: Image(image: AssetImage("assets/images/mitrc.png")),
                 ),
                 SizedBox(
-                  height: 20.0,
+                  height: 30.0,
                 ),
                 SizedBox(
-                  height: 20.0,
+                  height: 30.0,
                 ),
                 Container(
                     width: 300,
                     child: Text(
-                      "Fight of India with Corona\n",
-                      style: TextStyle(fontSize: 18),
+                      "Fight of India with Corona\n\n",
+                      style: TextStyle(
+                          fontSize: 22.0,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.blue),
                       textAlign: TextAlign.center,
                     )),
                 Container(
                     width: 300,
                     child: Text(
-                      "An App \nto \nEmpower Citizens with Right Information About \nCOVID19",
-                      style: TextStyle(fontSize: 18),
+                      "An App \nto",
+                      style: TextStyle(fontSize: 16),
                       textAlign: TextAlign.center,
                     )),
+                Row(
+                  children: <Widget>[
+                    Container(
+                        //width: 300,
+                        child: Text(
+                      "Empower Citizens ",
+                      style: TextStyle(
+                          fontSize: 18,
+                          color: Colors.green,
+                          fontWeight: FontWeight.bold),
+                      textAlign: TextAlign.center,
+                    )),
+                    Container(
+                        //width: 300,
+                        child: Text(
+                      " with Right Information",
+                      style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.blue),
+                      textAlign: TextAlign.center,
+                    )),
+                  ],
+                ),
+                Container(
+                    //  width: 300,
+                    child: Text(
+                  "about",
+                  style: TextStyle(
+                    fontSize: 16,
+                  ),
+                  textAlign: TextAlign.center,
+                )),
+                Container(
+                    //  width: 300,
+                    child: Text(
+                  "COVID19(Corona Virus)",
+                  style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.red,
+                      fontWeight: FontWeight.bold),
+                  textAlign: TextAlign.center,
+                )),
                 SizedBox(
-                  height: 25.0,
+                  height: 65.0,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     Container(
-                      width: 140,
-                      child:
-                          Image(image: AssetImage("assets/images/Corona.png")),
-                    ),
-                    Container(
                         width: 110,
-                        child: Text(
-                          "LET'S STOP COVID19",
-                          style: TextStyle(fontSize: 27),
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 30.0),
+                          child: Text(
+                            "LET'S STOP ",
+                            style: TextStyle(
+                                fontSize: 25, fontWeight: FontWeight.bold),
+                          ),
                         )),
+                    Container(
+                      width: 200,
+                      child: Padding(
+                        padding: const EdgeInsets.only(right: 20.0),
+                        child: Image(
+                            width: 100,
+                            image: AssetImage("assets/images/covid19.png")),
+                      ),
+                    ),
                   ],
                 ),
                 SizedBox(
