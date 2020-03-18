@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'loginPage.dart';
+
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -19,10 +21,9 @@ class HomePage extends StatelessWidget {
             Align(
               alignment: Alignment.bottomCenter,
               child: Padding(
-                padding: const EdgeInsets.only(bottom: 20.0),
+                padding: const EdgeInsets.only(bottom: 40.0),
                 child: Container(
-                  child:
-                      Image(image: AssetImage("assets/images/abstractb.png")),
+                  child: Image(image: AssetImage("assets/images/abstract.png")),
                 ),
               ),
             ),
@@ -170,9 +171,17 @@ class HomePage extends StatelessWidget {
                                     Color(0xFFf7418c)
                                   ])),
                           child: Center(
-                            child: Text(
-                              "Login ",
-                              style: TextStyle(fontSize: 12.0),
+                            child: MaterialButton(
+                              onPressed: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => LoginPage()));
+                              },
+                              child: Text(
+                                "Login ",
+                                style: TextStyle(fontSize: 12.0),
+                              ),
                             ),
                           )),
                       shape: RoundedRectangleBorder(
